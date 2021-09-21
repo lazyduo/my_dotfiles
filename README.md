@@ -1,6 +1,6 @@
 # my_dotfiles
 
-Linux config...
+Private Repository for Configuration and Setup files.
 
 ## SSH
 
