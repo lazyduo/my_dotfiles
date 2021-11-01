@@ -7,6 +7,10 @@ HOST_NAME=lazyduo
 
 export PATH=/opt/homebrew/bin:$PATH
 
+export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 
@@ -38,3 +42,6 @@ fortune | cowsay
 
 # Aliases
 alias rs="cd /Users/dada/project/yumi && python3 manage.py runserver 0.0.0.0:8000"
+alias rnd="open 'rndebugger://set-debugger-loc?host=localhost&port=8081'"
+alias myip="curl ipinfo.io/ip"
+
