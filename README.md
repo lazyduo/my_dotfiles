@@ -4,15 +4,7 @@ Private Repository for Configuration and Setup files.
 
 ## SSH
 
-ssh config
-
-~/.ssh/config
-
-key gen
-
-```
-ssh-keygen -m PEM -f .ssh/###.pem
-```
+[Link](https://github.com/lazyduo/my_dotfiles/tree/main/.ssh)
 
 ## Routing
 
