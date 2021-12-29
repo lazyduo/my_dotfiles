@@ -16,19 +16,15 @@ Private Repository for Configuration and Setup files.
 ```bash
 tree -L 2 -I "docs|build|thanosSQL*|__pycache__"
 ```
+
+```
 .
-
 ├── README.md
-
 ├── setup.py
-
 └── thanos
-
     ├── __init__.py
-    
     ├── execute.py
-    
     ├── magic.py
-    
     └── parse.py
+```
     
