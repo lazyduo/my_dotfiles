@@ -13,6 +13,7 @@ Private Repository for Configuration and Setup files.
 
 ## Ubuntu cmd
 
+### tree
 ```bash
 tree -L 2 -I "docs|build|thanosSQL*|__pycache__"
 ```
@@ -26,5 +27,11 @@ tree -L 2 -I "docs|build|thanosSQL*|__pycache__"
     ├── execute.py
     ├── magic.py
     └── parse.py
+```
+
+### delete file
+To delete all fiels in a directory except filename.
+```bash
+rm -v !("filename")
 ```
     
