@@ -1,4 +1,6 @@
-## SSH
+# SSH
+
+## config
 
 ssh config
 
@@ -11,8 +13,21 @@ Host <alias name>
     Port 22
     User <username>
 ```
+## keygen
 
-### key gen for window
+```
+ssh-keygen
+```
+
+will make new ssh key name 'id_rsa' for Linux, mac os
+
+## pub Key gen for exist pem file
+
+```
+ssh-keygen -m PEM -f .ssh/###.pem
+```
+
+## key gen for window
 
 ```
 $ ssh-keygen
