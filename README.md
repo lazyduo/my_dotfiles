@@ -50,4 +50,10 @@ Another way that does not require administrative rights is to place an empty fil
 
 into your $HOME directory (using for example touch ~/.hushlogin).
 
+## bash global profile
+
+edit this file
+
+`/etc/bash.bashrc`
+
     
