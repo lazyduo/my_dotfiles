@@ -42,4 +42,12 @@ rm -v !("filename")
 `/var/log/secure` 사용자 접속 정보가 (ssh 등) 나오기 때문에 해킹이 의심되면 확인 할 것.
 
 
+## disable SSH login welcome message
+
+Another way that does not require administrative rights is to place an empty file called
+
+`.hushlogin`
+
+into your $HOME directory (using for example touch ~/.hushlogin).
+
     
