@@ -56,4 +56,11 @@ edit this file
 
 `/etc/bash.bashrc`
 
-    
+## shell script random
+
+```
+COWS=("dragon-and-cow" "frogs" "mutilated" "elephant-in-snake" "satanic" "hellokitty" "stegosaurus" "stimpy" "cheese" "vader")
+
+#echo ${COWS[$(($RANDOM%10))]}
+fortune | cowsay -f ${COWS[$(($RANDOM%10))]} | lolcat
+```
