@@ -48,13 +48,13 @@ alias myip="curl ipinfo.io/ip"
 # lolcat
 currenttime=$(date +%H:%M)
 figlet ${currenttime} | lolcat
-if [[ "$currenttime" > "08:00"]] || [["$currenttime" > "12:00" ]];
+if [[ "$currenttime" > "08:00"]] && [[ "$currenttime" < "12:00" ]];
 then
 figlet "GOOD MORNING DADA" | lolcat
-elif [[ "$currenttime" > "12:00" ]] || [[ "$currenttime" < "18:00" ]];
+elif [[ "$currenttime" > "12:00" ]] && [[ "$currenttime" < "18:00" ]];
 then
 figlet "GOOD AFTERNOON DADA" | lolcat
-elif [[ "$currenttime" > "18:00" ]] || [[ "$currenttime" < "00:00" ]];
+elif [[ "$currenttime" > "18:00" ]] && [[ "$currenttime" < "00:00" ]];
 then
 figlet "GOOD EVENING DADA" | lolcat
 else
