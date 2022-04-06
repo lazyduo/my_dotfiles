@@ -45,3 +45,18 @@ alias rs="cd /Users/dada/project/yumi && python3 manage.py runserver 0.0.0.0:800
 alias rnd="open 'rndebugger://set-debugger-loc?host=localhost&port=8081'"
 alias myip="curl ipinfo.io/ip"
 
+# lolcat
+currenttime=$(date +%H:%M)
+figlet ${currenttime} | lolcat
+if [[ "$currenttime" > "08:00"]] || [["$currenttime" > "1200" ]];
+then
+figlet "GOOD MORNING DADA" | lolcat
+elif [[ "$currenttime" > "12:00" ]] || [[ "$currenttime" < "18:00" ]];
+then
+figlet "GOOD AFTERNOON DADA" | lolcat
+elif [[ "$currenttime" > "18:00" ]] || [[ "$currenttime" < "00:00" ]];
+then
+figlet "GOOD EVENING DADA" | lolcat
+else
+figlet "GO TO BED DADA" | lolcat
+fi
