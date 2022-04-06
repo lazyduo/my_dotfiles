@@ -38,7 +38,8 @@ PROMPT_COMMAND=print_before_the_prompt
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 PS1=">"
 
-fortune | cowsay
+# simple cowsay
+# fortune | cowsay
 
 # Aliases
 alias rs="cd /Users/dada/project/yumi && python3 manage.py runserver 0.0.0.0:8000"
@@ -47,16 +48,66 @@ alias myip="curl ipinfo.io/ip"
 
 # lolcat
 currenttime=$(date +%H:%M)
-figlet ${currenttime} | lolcat
-if [[ "$currenttime" > "08:00"]] && [[ "$currenttime" < "12:00" ]];
+#figlet "Current Time: ${currenttime}" | lolcat
+if [[ "$currenttime" > "08:00" && "$currenttime" < "12:00" ]];
 then
-figlet "GOOD MORNING DADA" | lolcat
-elif [[ "$currenttime" > "12:00" ]] && [[ "$currenttime" < "18:00" ]];
+figlet "GOOD MORNING ${USER^^}" | lolcat
+elif [[ "$currenttime" > "12:00" && "$currenttime" < "18:00" ]];
 then
-figlet "GOOD AFTERNOON DADA" | lolcat
-elif [[ "$currenttime" > "18:00" ]] && [[ "$currenttime" < "00:00" ]];
+figlet "GOOD AFTERNOON ${USER^^}" | lolcat
+elif [[ "$currenttime" > "18:00" && "$currenttime" < "00:00" ]];
 then
-figlet "GOOD EVENING DADA" | lolcat
+figlet "GOOD EVENING ${USER^^}" | lolcat
 else
-figlet "GO TO BED DADA" | lolcat
+figlet "GO TO BED ${USER^^}" | lolcat
 fi
+#figlet "WELCOME" | lolcat
+COWS=('apt'
+'cheese'
+'default'
+'elephant-in-snake'
+'fox'
+'kangaroo'
+'luke-koala'
+'moose'
+'sheep'
+'stimpy'
+'turtle'
+'vader-koala'
+'bud-frogs'
+'cock'
+'dragon-and-cow'
+'elephant'
+'ghostbusters'
+'kiss'
+'mech-and-cow'
+'pony-smaller'
+'skeleton'
+'suse'
+'tux'
+'vader'
+'bunny'
+'cower'
+'dragon'
+'eyes'
+'gnu'
+'koala'
+'milk'
+'pony'
+'snowman'
+'three-eyes'
+'unipony-smaller'
+'www'
+'calvin'
+'daemon'
+'duck'
+'flaming-sheep'
+'hellokitty'
+'kosh'
+'moofasa'
+'ren'
+'stegosaurus'
+'turkey'
+'unipony')
+#echo ${COWS[$(($RANDOM%10))]}
+fortune | cowsay -f ${COWS[$(($RANDOM%47))]} | lolcat
