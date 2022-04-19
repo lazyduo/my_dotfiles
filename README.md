@@ -56,6 +56,21 @@ edit this file
 
 `/etc/bash.bashrc`
 
+## .bashrc vs .bash_profile
+
+.bashrc는 non_login shell, .bash_profile은 login_shell으로 .bashrc는 ssh는 로그인 시에 나타나는 것이 아닌 새터미널을 열 때 로드됨.
+
+그래서 .bash_profile에 유저 커스텀이 보통 들어간다
+
+만약 .bashrc를 ssh login할 때 load하고 싶으면 `.bash_profile`에 아래 처럼 처리.
+
+```
+# Source bashrc
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+```
+
 ## shell script random
 
 ```
