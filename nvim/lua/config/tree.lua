@@ -6,7 +6,7 @@ return {
         --   dotfiles = true,
         -- },
         view = {
-          width = 50,
+          width = 30,
         },
         renderer = {
           group_empty = true,
